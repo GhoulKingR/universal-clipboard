@@ -1,5 +1,5 @@
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import { FormEvent, useEffect, useRef, useState } from "react";
+import { CSSProperties, FormEvent, useEffect, useRef, useState } from "react";
 import { auth, db } from "./firebase";
 import { useNavigate } from "react-router-dom";
 import { addDoc, collection, getDocs } from "firebase/firestore";
@@ -56,10 +56,16 @@ function ClipboardItems() {
     });
   };
 
+  const head: CSSProperties = {
+    display: "flex",
+    justifyContent: "space-between",
+    width: "100%",
+  };
+
   return (
     <div>
-      <div>
-        {user?.displayName}
+      <div style={head}>
+        <div>{user?.displayName}</div>
         <button onClick={() => signout()}>signout</button>
       </div>
       <form onSubmit={addItem}>
