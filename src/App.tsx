@@ -18,7 +18,7 @@ function App() {
     if (user !== null) {
       navigate("/clipboards");
     }
-  }, [user]);
+  }, [user, navigate]);
 
   const login = async () => {
     const provider = new GoogleAuthProvider();
