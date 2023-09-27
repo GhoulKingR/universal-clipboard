@@ -183,12 +183,14 @@ function ClipboardItems() {
           <div className="text-2xl flex items-center">
             <img
               src={user?.photoURL}
+              alt="Profile"
               className="h-[50px] mr-[15px] rounded-full border-solid border-2"
             />
             {user?.displayName.toUpperCase()}
           </div>
-          <Button color="error" endIcon={<Logout />} onClick={() => signout()}>
-            signout
+          <Button color="error" onClick={() => signout()}>
+            <div className="hidden sm:inline mr-[10px]">signout </div>
+            <Logout />
           </Button>
         </Container>
       </Header>
@@ -206,10 +208,12 @@ function ClipboardItems() {
             color="primary"
             type="submit"
             variant="outlined"
-            endIcon={<SaveAlt />}
             ref={addButton}
           >
-            Add to universal clipboard
+            <div className="hidden sm:inline mr-[10px]">
+              Add to universal clipboard
+            </div>
+            <SaveAlt />
           </Button>
         </form>
 
