@@ -40,9 +40,11 @@ function ClipboardItems() {
   // Take the user back if they're not logged in
   const navigate = useNavigate();
   useEffect(() => {
-    if (user === null) {
-      navigate("/");
-    }
+    setTimeout(() => {
+      if (user === null) {
+        navigate("/");
+      }
+    }, 5000);
   }, [user, navigate]);
 
   // Pull all clipboard data from the server when component runs the first time
