@@ -46,7 +46,7 @@ function Body({ clipboard, setClipboard }: InputType) {
             onClick={(e) => copyText(e, item)}
             key={i}
           >
-            <div>{item.name}</div>
+            <span className="truncate w-[70%]">{item.name}</span>
             <div>
               {item.checked !== undefined ? (
                 item.checked ? (
@@ -60,7 +60,7 @@ function Body({ clipboard, setClipboard }: InputType) {
                   </>
                 ) : (
                   <>
-                    <span className="mr-[5px]">
+                    <span className="mr-[5px] hidden sm:inline">
                       <small>Click to copy</small>
                     </span>
                     <span>

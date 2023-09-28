@@ -1,11 +1,6 @@
 import { useEffect, useState } from "react";
 import { auth } from "../lib/firebase";
-import {
-  GoogleAuthProvider,
-  User,
-  getRedirectResult,
-  signInWithPopup,
-} from "firebase/auth";
+import { GoogleAuthProvider, User, signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 import { Google } from "@mui/icons-material";
@@ -16,12 +11,7 @@ type InputType = {
 };
 
 function App({ setUser, user }: InputType) {
-  const [text, setText] = useState("Google");
-  // Watch out for changes in auth state to update the `user` state
-  // const [user, setUser] = useState(auth.currentUser);
-  // onAuthStateChanged(auth, () => {
-  //   setUser(auth.currentUser);
-  // });
+  const [text] = useState("Google");
 
   // Monitor the user state to take the user to the
   // `/clipboard` page if they're logged in

@@ -1,5 +1,5 @@
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import React, { FormEvent, useRef, useState } from "react";
+import React, { FormEvent, useState } from "react";
 import { db } from "../../lib/firebase";
 import { User } from "@firebase/auth";
 import { getClipboard, Clipboard } from "../../lib";
@@ -57,7 +57,7 @@ function AddToClipBoard({ user, setClipboard }: InputType) {
   return (
     <form onSubmit={addItem} className="flex pb-[30px]">
       <Input
-        className="mr-5 flex-1"
+        className="mr-5 flex-1 z-[-1]"
         type="text"
         placeholder="Write or paste text"
         value={item}
@@ -65,7 +65,7 @@ function AddToClipBoard({ user, setClipboard }: InputType) {
         required
       />
       <Button
-        className="flex-none"
+        className="flex-none z-[-1]"
         color="primary"
         type="submit"
         variant="outlined"

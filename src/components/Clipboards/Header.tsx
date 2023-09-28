@@ -26,7 +26,7 @@ function Header({ user }: InputType) {
   };
 
   return (
-    <Head className="border-solid border-b-2 mb-[30px]">
+    <Head className="border-solid border-b-2 mb-[30px] bg-white">
       <Container
         className="items-center justify-between flex-row p-[10px]"
         style={head}
@@ -36,10 +36,10 @@ function Header({ user }: InputType) {
             <>
               <img
                 src={user?.photoURL}
-                alt="Profile"
+                alt=""
                 className="h-[50px] mr-[15px] rounded-full border-solid border-2"
               />
-              {user?.displayName.toUpperCase()}
+              <span className="truncate">{user?.displayName}</span>
             </>
           ) : (
             <>
