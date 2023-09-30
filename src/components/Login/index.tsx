@@ -39,7 +39,7 @@ function App({ setUser, user }: InputType) {
           </p>
         </Grid>
         <Grid item>
-          <img src={Screenshot} className="pt-[50px] pd-[50px]" />
+          <img src={Screenshot} alt="" className="pt-[50px] pd-[50px]" />
         </Grid>
       </Grid>
     </Container>
