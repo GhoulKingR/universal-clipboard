@@ -26,7 +26,7 @@ function Header({ user }: InputType) {
   };
 
   return (
-    <Head className="border-solid border-b-2 mb-[30px] bg-white">
+    <Head className="border-solid border-b-2 mb-[30px] bg-white z-[1000]">
       <Container
         className="items-center justify-between flex-row p-[10px]"
         style={head}

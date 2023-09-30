@@ -57,7 +57,7 @@ function AddToClipBoard({ user, setClipboard }: InputType) {
   return (
     <form onSubmit={addItem} className="flex pb-[30px]">
       <Input
-        className="mr-5 flex-1 z-[-1]"
+        className="mr-5 flex-1 z-[0]"
         type="text"
         placeholder="Write or paste text"
         value={item}
@@ -65,7 +65,7 @@ function AddToClipBoard({ user, setClipboard }: InputType) {
         required
       />
       <Button
-        className="flex-none z-[-1]"
+        className="flex-none z-[0]"
         color="primary"
         type="submit"
         variant="outlined"
